@@ -1,0 +1,16 @@
+    USAGE
+
+        setup-docker [name] [path/to/dockerfile] [ssh uri]
+
+    OPTIONS
+
+        -p     --port       Port redirection option for running the container.
+
+        -v     --version    Show version and exit
+        -h     --help       Show help and exit
+
+    EXAMPLES
+
+        $ setup-docker redis Dockerfile root@192.168.2.30
+
+        $ setup-docker node Dockerfile root@192.168.2.30 -p 80:8080

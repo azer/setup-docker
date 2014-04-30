@@ -1,0 +1,30 @@
+{
+  "name": "setup-docker",
+  "version": "0.0.0",
+  "description": "Setup Docker and given Dockerfile in a remote machine.",
+  "main": "index.js",
+  "bin": {
+    "setup-docker": "./bin/setup-docker"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "docker",
+    "remote",
+    "ssh"
+  ],
+  "repository": {
+    "url": "git@github.com:azer/setup-docker.git",
+    "type": "git"
+  },
+  "author": "azer",
+  "license": "BSD",
+  "dependencies": {
+    "local-debug": "0.0.0",
+    "remotely": "^1.1.1",
+    "serially": "0.0.2",
+    "default-debug": "0.0.0",
+    "new-command": "^1.0.x"
+  }
+}

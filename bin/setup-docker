@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+require('default-debug')('setup-docker:*');
+
+var command = require('new-command')({
+  p: "port",
+  o: 'verbose'
+});
+
+var debug = require("local-debug")('cli');
+var setup = require("../");
+
+if (command._.length < 3) return require('new-command').help();
+
+debug('One moment please...');
+
+command.name = command._[0];
+command.dockerfile = command._[1];
+command.ssh = command._[2];
+
+setup(command, function (error) {
+  if (error) throw error;
+  debug('Done.');
+});
